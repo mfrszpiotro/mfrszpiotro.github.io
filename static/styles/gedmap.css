@@ -16,6 +16,9 @@
     --cyan: #2E8087;
     --white: #ffecbd;
     --gray: #7C9299;
+
+    --josefin: "Josefin Sans";
+    --open: "Open Sans"
 }
 
 *,
@@ -25,22 +28,72 @@
 }
 
 body {
+    padding-top: 180px;
     margin: 40px;
-    font-family: 'Open Sans';
+    font-family: var(--open);
     background-color: var(--white);
     color: var(--darkbrown);
 }
 
-h1{
-    font-family: 'Josefin Sans' !important;
-    font-weight: bold;
-    margin: 0 0 1em 0;
+nav {
+    background-color: var(--darkbrown);
+    border: 40px solid whitesmoke;
+    border-radius: 100px;
+    font-family: var(--open);
+    font-size: 20px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100px;
+    padding: 1rem;
+    padding-bottom: 0;
+    box-shadow: 0px 7px 5px var(--darkbrown);
+    width: 1000px;
+    z-index: 999;
+    transition: 0.5s;
 }
 
-.wrapper {
-    margin: 0 20px;
-    display: grid;
-    grid-gap: 10px;
+nav ul {
+    list-style-type: none;
+    padding-top: 40px;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav h2 a {
+    color: var(--cyan);
+    text-shadow: 
+    whitesmoke 1px 0px 1px, 
+    whitesmoke -1px 0px 1px,
+    whitesmoke 0px -1px 1px, 
+    whitesmoke 0px 1px 1px;
+}
+
+nav a:hover {
+    color: var(--orange)
+}
+
+h2{
+    font-family: var(--josefin);
+}
+
+h1{
+    font-family: var(--josefin);
+    font-weight: bold;
+    margin: 0 0 1em 0;
 }
 
 .btn {
@@ -58,78 +111,8 @@ h1{
     transition: filter 100ms linear;
 }
 
-.save {
-    background-color: var(--orange);
-}
-
-.zoom {
-    background-color: var(--orange);
-}
-
-@media screen and (min-width: 600px) {
-
-    /* no grid support? */
-    .block-a,
-    .block-b,
-    .block-c {
-        float: left;
-        width: 19.1489%;
-    }
-
-    .content {
-        float: right;
-        width: 79.7872%;
-    }
-
-    .wrapper {
-        margin: 0 auto;
-        grid-template-columns: 1fr 3fr;
-        grid-auto-rows: minmax(150px, auto);
-    }
-
-    .header,
-    .footer {
-        grid-column: 1 / -1;
-        /* needed for the floated layout */
-        clear: both;
-    }
-
-    .block-a {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .block-b {
-        grid-column: 1;
-        grid-row: 4;
-    }
-
-    .block-c {
-        grid-column: 1;
-        grid-row: 6;
-    }
-
-    .content {
-        grid-column: 2;
-        grid-row: 2 / 7;
-    }
-
-}
-
-.wrapper>* {
-    background-color: var(--darkbrown);
-    color: var(--white);
-    border-radius: 5px;
-    padding: 20px;
-    font-size: 150%;
-    /* needed for the floated layout*/
-    margin-bottom: 10px;
-}
-
-/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
-@supports (display: grid) {
-    .wrapper>* {
-        width: auto;
-        margin: 0;
+@media screen and (max-width:1600px){
+    nav {
+        width: 102%;
     }
 }

@@ -4,54 +4,62 @@
 </html>
 
 <head>
-    <meta charset="utf-8">
-    <title>GedMap - your geneaology trees</title>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0">
+    <title>GedMap</title>
     <link rel="stylesheet" href="./static/styles/gedmap.css">
-    <link rel="stylesheet" href="./static/styles/gentree.css">
+    <link rel="stylesheet" href="./static/styles/index.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <h1>GedMap - geneaology tree viewer</h1>
-        </header>
-        <script src="https://unpkg.com/gojs@2.3.10/release/go.js"></script>
-        <script type="text/javascript" src="./static/scripts/familyTree.js"></script>
-        <article class="content">
-            <div id="myDiagramDiv" class="gentree">
-
-            </div>
-            <button id="centerRoot" class="btn save">Save tree layout</button>
-            <button id="zoomToFit" class="btn zoom">Zoom out</button>
-
-        </article>
-
-        <div class="block-a">Import your file: </div>
-        <div class="block-b">Currently viewing: </div>
-        <div class="block-c">Block C</div>
-        <footer class="footer">My footer
-            <textarea id="mySavedModel" style="width:100%; height:270px;">
-                { "class": "go.TreeModel",
-                "nodeDataArray": [
-                {"key":1, "name":"Stella Payne Diaz", "title":"CEO", "pic":"1.jpg"},
-                {"key":2, "name":"Luke Warm", "title":"VP Marketing/Sales", "pic":"2.jpg", "parent":1},
-                {"key":3, "name":"Meg Meehan Hoffa", "title":"Sales", "pic":"3.jpg", "parent":2},
-                {"key":4, "name":"Peggy Flaming", "title":"VP Engineering", "pic":"4.jpg", "parent":1},
-                {"key":5, "name":"Saul Wellingood", "title":"Manufacturing", "pic":"5.jpg", "parent":4},
-                {"key":6, "name":"Al Ligori", "title":"Marketing", "pic":"6.jpg", "parent":2},
-                {"key":7, "name":"Dot Stubadd", "title":"Sales Rep", "pic":"7.jpg", "parent":3},
-                {"key":8, "name":"Les Ismore", "title":"Project Mgr", "pic":"8.jpg", "parent":5},
-                {"key":9, "name":"April Lynn Parris", "title":"Events Mgr", "pic":"9.jpg", "parent":6},
-                {"key":10, "name":"Xavier Breath", "title":"Engineering", "pic":"10.jpg", "parent":4},
-                {"key":11, "name":"Anita Hammer", "title":"Process", "pic":"11.jpg", "parent":5},
-                {"key":12, "name":"Billy Aiken", "title":"Software", "pic":"12.jpg", "parent":10},
-                {"key":13, "name":"Stan Wellback", "title":"Testing", "pic":"13.jpg", "parent":10},
-                {"key":14, "name":"Marge Innovera", "title":"Hardware", "pic":"14.jpg", "parent":10},
-                {"key":15, "name":"Evan Elpus", "title":"Quality", "pic":"15.jpg", "parent":5},
-                {"key":16, "name":"Lotta B. Essen", "title":"Sales Rep", "pic":"16.jpg", "parent":3}
-                ]
-                }
-        </textarea>
-        </footer>
+    <nav id="navbar">
+        <ul>
+            <li>
+                <h2><a href="./index.html">GedMap</a></h2>
+            </li>
+            <li><a href="./static/templates/import.html">Upload</a></li>
+            <li><a href="./static/templates/viewer.html">Viewer</a></li>
+            <li><a target=”_blank href="https://github.com/mfrszpiotro/gedmap">Source code</a></li>
+        </ul>
+    </nav>
+    <script type="text/javascript" src="./static/scripts/hideNav.js"></script>
+    <div id="welcome">
+        <h1>Show your geneaology tree to the world.</h1>
+        <h1>Better.</h1>
+        <div>Start now with just one import of your .gedcom file and easily migrate from </div>
+        <div>MyHeritage, Ancestry and more.</div>
     </div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="welcome">.</div>
+    <div id="sides-container">
+        <div id="left-side" class='slanted'>
+            <!-- <button id="btn-left" class="btn" onclick="window.location.href='./viewer.html';">
+                Go to Viewer
+            </button> -->
+        </div>
+        <div id="right-side" class='slanted'>
+            <!-- <button id="btn-right" class="btn" onclick="window.location.href='./import.html';">
+                Go to Import
+            </button> -->
+        </div>
+    </div>
+    <script type="text/javascript" src="./static/scripts/indexSides.js"></script>
 </body>
